@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Assign 4</title>
+	<!-- Make two controllers with scope -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript">
+		var mod=angular.module("myapp",[]);
+		mod.run(function($rootScope){
+			$rootScope.msg=" Root ";
+		});
+		mod.controller("con1",function($scope){
+			$scope.msg=" Con 1 ";
+		});
+		mod.controller("con2",function($scope){
+			$scope.msg=" Con 2";
+		});
+				
+	</script>
+</head>
+<body>
+	<div ng-app="myapp">
+		<p> This is root scope variable : <b> {{msg}} </b> </p>
+		<div ng-controller="con1">
+			<p> This is controller 1 variable : <b> {{msg}} </b> </p>
+		</div>
+		<div ng-controller="con2">
+			<p> This is controller 2 variable : <b> {{msg}} </b> </p>
+		</div>
+
+	</div>
+
+
+</body>
+</html>

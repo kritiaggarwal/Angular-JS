@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Assign 1</title>
+	<!-- Make a form with two inputs and a submit button. Show details in a table and when we make changes to input table, value also changes -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript">
+		var mod=angular.module("myApp",[]);
+		mod.controller("MyCtrl",function($scope){
+			$scope.person={
+				FirstName:" " , LastName: " "
+			};
+		});
+
+	</script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="MyCtrl">
+		<form action="#">
+			First Name : <input type="text" placeholder="First name" ng-model="person.FirstName"></input><br><br>
+			Last Name : <input type="text" placeholder="Last name" ng-model="person.LastName"> </input><br><br>
+			<input type="Submit"> </input><br> <br>
+		</form>
+
+		<table border="1px solid black">
+			<thead>
+				<th> Detail </th>
+				<th> Value </th>
+
+			</thead>
+			<tbody>
+				<tr>
+					<td ng-bind="person.FirstName"> &nbsp </td>
+					<td ng-bind="person.LastName"> &nbsp </td>
+				</tr>
+
+			</tbody>
+		</table>
+
+	</div>
+</body>
+</html>

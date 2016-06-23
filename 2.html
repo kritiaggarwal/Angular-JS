@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Assign 2</title>
+	<!-- Create module “myapp” and controller “ mycontroller” with scope properties such as “ name and last name”. -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript">
+		var myapp=angular.module("myappp",[]);
+		myapp.controller("mycontroller", function($scope){ 
+			$scope.person={ firstname: " Kriti " ,lastname: " Aggarwal " }
+		});
+		
+	</script>
+</head>
+<body>
+	<div ng-app="myappp" ng-controller="mycontroller">
+		<h3> First Name : </h3> <h4 ng-bind="person.firstname"> </h2>
+		<h3> Last Name : </h3> <h4 ng-bind="person.lastname">  </h4>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Assign 5</title>
+	<!-- Show the Scope value inside the view with ng-model directives. a.Name b.EmployeeID c.Designation -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript">
+		var mod=angular.module("myapp",[]);
+		mod.controller("con",function($scope){
+			$scope.person={ Firstname: "Kriti" , lastname: "Aggarwal" , EmployeeID:"12" , Designation:"SDE"};
+		});
+		
+	</script>
+</head>
+<body>
+	<div ng-app="myapp" ng-controller="con">
+		<table>
+			<tr> 
+				<td> First Name : </td><td> <input ng-model="person.Firstname"> </input> </td>
+			</tr>
+			<tr>
+				<td>Last Name : </td><td> <input ng-model="person.lastname"> </input></td>
+			</tr>
+			<tr>
+				<td> EmployeeID : </td><td> <input ng-model="person.EmployeeID"> </input></td>
+			</tr>
+			<tr>
+				<td> Designation : </td><td> <input ng-model="person.Designation"> </input></td>
+			</tr>
+			
+		</table>
+
+	</div>
+
+</body>
+</html>

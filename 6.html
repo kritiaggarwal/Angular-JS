@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Assign 6</title>
+	<!-- Make Use of NgClick event directive on the button to show an alert.
+	7) Make use of NgDbclick event directive on the button to show an alert.
+	8) Make use of ng-Bind attribute and show values of scope inside the view. -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript">
+		var mod=angular.module("myapp",[]);
+		mod.controller("con",function($scope){
+			$scope.Name="Kriti Aggarwal";
+			$scope.clickfun=function(){
+				alert("This is single click event demonstration");
+			}
+			$scope.dblclickfun=function(){
+				alert("This is double click event demonstration");
+			}
+		});
+	</script>
+</head>
+<body>
+	<div ng-app="myapp" ng-controller="con">
+		<p>  <b> Make Use of NgClick event directive on the button to show an alert. </b> </p>
+		<button ng-click="clickfun()">Click me once</button> <br> <br>
+		<p> <b> Make use of NgDbclick event directive on the button to show an alert. </b></p>
+		<button ng-dblclick="dblclickfun()">Click me twice</button> <br> <br>
+		<p> <b> Make use of ng-Bind attribute and show values of scope inside the view.</b> </p>
+		<p> The value of variable Name is : </p>
+		<u> <p ng-bind="Name"></p> </u>
+	</div>
+
+</body>
+</html>

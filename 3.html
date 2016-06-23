@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Assign 3</title>
+	<!-- Make a controller with scope and print “Hello World”. -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript">
+		var mod= angular.module("myapp",[]);
+		mod.controller("mycon",function($scope){
+			$scope.msg="Hello World";
+		});
+		
+	</script>
+</head>
+<body>
+	<div ng-app="myapp" ng-controller="mycon">
+		{{ msg }}
+	</div>
+
+</body>
+</html>
